@@ -1,4 +1,5 @@
-//#include<iomanip>
+#include <iostream>
+using namespace std;
 
 class Stack{
 
@@ -42,6 +43,17 @@ public:
 		}
 		else {
 			return false;
+		}
+	}
+
+	void print() const {
+		std::cout << "Contents of the Stack:" << std::endl;
+		if (!empty()) {
+			std::cout << top_fn() << std::endl;
+			pop;
+		}
+		else {
+			std::cout << "N/A" << std::endl;
 		}
 	}
 
