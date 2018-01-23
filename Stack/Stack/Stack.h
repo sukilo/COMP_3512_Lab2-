@@ -21,6 +21,9 @@ public:
 		top--;
 	}
 
+	int top_fn() const {
+		return array[top];
+	}
 
 
 
