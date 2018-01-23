@@ -17,6 +17,10 @@ public:
 		top++; 
 	}
 
+	void pop() {
+		top--;
+	}
+
 
 
 
