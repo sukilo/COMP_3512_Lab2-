@@ -1,9 +1,10 @@
+#ifndef STACK_H_
+#define STACK_H_
 #include <iostream>
 using namespace std;
+constexpr int SIZE = 10;
 
 class Stack{
-
-	constexpr int size = 10; 
 
 private:
 	int array [10];
@@ -38,7 +39,7 @@ public:
 	}
 
 	bool full() const {
-		if (top == size) {
+		if (top == SIZE) {
 			return true;
 		}
 		else {
@@ -50,11 +51,10 @@ public:
 		std::cout << "Contents of the Stack:" << std::endl;
 		if (!empty()) {
 			std::cout << top_fn() << std::endl;
-			pop;
 		}
 		else {
 			std::cout << "N/A" << std::endl;
 		}
 	}
-
 };
+#endif
