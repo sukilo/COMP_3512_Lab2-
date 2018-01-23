@@ -1,6 +1,8 @@
+//#include<iomanip>
+
 class Stack{
 
-constexpr int MAX_SIZE{10};
+	constexpr int size = 10; 
 
 private:
 	int array [10];
@@ -23,6 +25,15 @@ public:
 
 	int top_fn() const {
 		return array[top];
+	}
+
+	bool empty() {
+		if (top == -1) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 
