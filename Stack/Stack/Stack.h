@@ -27,7 +27,7 @@ public:
 		return array[top];
 	}
 
-	bool empty() {
+	bool empty() const {
 		if (top == -1) {
 			return true;
 		}
@@ -36,6 +36,13 @@ public:
 		}
 	}
 
-
+	bool full() const {
+		if (top == size) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 
 };
