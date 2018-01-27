@@ -1,13 +1,12 @@
-#ifndef STACK_H_
-#define STACK_H_
 #include <iostream>
+
 using namespace std;
-constexpr int SIZE = 10;
 
 class Stack{
+	static constexpr int SIZE = 10;
 
 private:
-	int array [10];
+	int array [SIZE];
 	int top;
 
 public:
@@ -16,45 +15,15 @@ public:
 		top = -1; 
 	}
 
-	void push(int value) {
-		array[top + 1] = value;
-		top++; 
-	}
+	void push(int val);
 
-	void pop() {
-		top--;
-	}
+	void pop();
 
-	int top_fn() const {
-		return array[top];
-	}
+	int top_fn() const;
 
-	bool empty() const {
-		if (top == -1) {
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
+	bool empty() const;
 
-	bool full() const {
-		if (top == SIZE) {
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
+	bool full() const;
 
-	void print() const {
-		std::cout << "Contents of the Stack:" << std::endl;
-		if (!empty()) {
-			std::cout << top_fn() << std::endl;
-		}
-		else {
-			std::cout << "N/A" << std::endl;
-		}
-	}
+	void print() const;
 };
-#endif
